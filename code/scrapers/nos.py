@@ -25,6 +25,9 @@ class NOSScraper:
 			p = div.find('p', 'sc-d176aaed-0 blKpuK')
 			if p:
 				text += ' ' + p.text
+				
+		title = title.decode("iso-8859-1").encode("utf-8")
+		text = text.decode("iso-8859-1").encode("utf-8")
 		return title, text
 
 	# write a day's articles
